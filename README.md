@@ -1,6 +1,8 @@
 # caesar-cipher  
 
 This is simply a caesar cipher function built with ruby  
+If you do not have ruby installed you can run it through replit below  
+[![Run on Repl.it](https://repl.it/badge/github/AxtonS/caesar-cipher)](https://repl.it/github/AxtonS/caesar-cipher)
 
 ## finished  
 Below are my thoughts prior to starting the project and then the steps I took as I worked through it.
@@ -27,4 +29,9 @@ I ended up learning the ins and outs of where to put my variables and why. It to
 -added logic to wrap around the alphabet for in either direction  
 -saves shifted letters into new array  
 -ignores non letters and saves them to array as they are  
--converts new array back to string and prints to screen
+-converts new array back to string and prints to screen  
+
+## updates  
+
+-fixed the app so that it only accepts valid integers for the shift variable  
+-reworded the puts messages before the inputs to read better

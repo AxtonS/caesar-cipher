@@ -1,9 +1,12 @@
 def caesar_cipher  
-  puts "Please enter your message:"
+  puts "Please enter a message you'd like to encode:"
   string = gets.chomp
-  puts "Please enter a value you'd like to shift your message by:"
-  shift = gets.chomp.to_i
-  
+  puts "Please enter a number you'd like to shift your message by:"
+  shift = Integer(gets) rescue false
+  while shift == false
+    puts "Please try again to enter a valid whole number:"
+    shift = Integer(gets) rescue false
+  end
   def shift(letter, shift)
     alphabet = ('a'..'z').to_a
     alphabet.each_with_index do |value, index|

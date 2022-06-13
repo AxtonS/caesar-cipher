@@ -1,5 +1,5 @@
 def caesar_cipher  
-  puts "Please enter a message you'd like to encode:"
+  puts "Please enter a message you'd like to encrypt:"
   string = gets.chomp
   puts "Please enter a number you'd like to shift your message by:"
   shift = Integer(gets) rescue false
@@ -35,6 +35,10 @@ def caesar_cipher
     end
   end
   caesar_array = caesar_array.join("")
+  puts "\nHere is your newly encrypted message:"
   puts caesar_array
 end
 caesar_cipher
+puts "\nTry to copy this message and use the opposite shift value to decrypt 
+\nFor example if you used a shift value of 5, try to use -5 on the encrypt 
+message!"

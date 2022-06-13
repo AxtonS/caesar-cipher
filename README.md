@@ -2,7 +2,7 @@
 
 This is simply a caesar cipher function built with ruby  
 If you do not have ruby installed you can run it through replit below  
-[![Run on Repl.it](https://repl.it/badge/github/AxtonS/caesar-cipher)](https://repl.it/github/AxtonS/caesar-cipher)
+https://replit.com/@AxtonSmith/caesar-cipher#.replit  
 
 ## finished  
 Below are my thoughts prior to starting the project and then the steps I took as I worked through it.

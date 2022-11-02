@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# performs the encoding
+# encodes a given string by a given shift value
 class CaesarCipher
   attr_reader :alphabet, :string, :integer
 

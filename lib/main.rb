@@ -30,7 +30,13 @@ class CaesarCipher
   def encode
     new_string = []
     @string.each do |letter|
+      if uppercase?(letter)
+        new_string.push(replace(letter.downcase).upcase)
+        next
+      end
+      new_string.push(replace(letter))
     end
+    new_string.join('')
   end
 end
 

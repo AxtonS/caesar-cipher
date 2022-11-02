@@ -52,4 +52,21 @@ describe CaesarCipher do
       expect(cipher.uppercase?('a')).to eql(false)
     end
   end
+
+  describe '#encode' do
+    it 'encodes string by shifting each letter by 1' do
+      cipher = CaesarCipher.new('abc', 1)
+      expect(cipher.encode).to eql('bcd')
+    end
+
+    it 'encodes string with correct case' do
+      cipher = CaesarCipher.new('aBc', 1)
+      expect(cipher.encode).to eql('bCd')
+    end
+
+    it 'encodes string with wrap' do
+      cipher = CaesarCipher.new('abc', 27)
+      expect(cipher.encode).to eql('bcd')
+    end
+  end
 end

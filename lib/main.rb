@@ -19,6 +19,7 @@ class CaesarCipher
       new_letter += 26 while new_letter.negative?
       return alphabet[new_letter]
     end
+    letter
   end
 
   def uppercase?(letter)
@@ -39,6 +40,12 @@ class CaesarCipher
     new_string.join('')
   end
 end
+
+puts "Please enter a message you'd like to encrypt:"
+message = gets.chomp
+puts "Please enter a number you'd like to shift your message by:"
+shift = gets.chomp.to_i
+puts "'#{message}' translates to '#{CaesarCipher.new(message, shift).encode}' with a shift of #{shift}"
 
 # def caesar_cipher
 #   puts "Please enter a message you'd like to encrypt:"

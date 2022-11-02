@@ -39,6 +39,11 @@ describe CaesarCipher do
       cipher = CaesarCipher.new('a', -25)
       expect(cipher.replace('a')).to eql('b')
     end
+
+    it 'returns identical non alphabet character' do
+      cipher = CaesarCipher.new('2', 1)
+      expect(cipher.replace('2')).to eql('2')
+    end
   end
 
   describe '#uppercase?' do

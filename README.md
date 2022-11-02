@@ -35,3 +35,4 @@ I ended up learning the ins and outs of where to put my variables and why. It to
 
 -fixed the app so that it only accepts valid integers for the shift variable  
 -reworded the puts messages before the inputs to read better
+-refactoring the project using TDD, add RSpec  

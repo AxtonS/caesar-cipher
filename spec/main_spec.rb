@@ -22,7 +22,7 @@ describe CaesarCipher do
 
   describe "#shift" do
     context "when 5" do
-      subject { CaesarCipher.new('test', 5)}
+      subject { CaesarCipher.new('test', 5) }
       it "when 5" do
         expect(subject.shift).to eql(5)
       end
@@ -36,6 +36,27 @@ describe CaesarCipher do
 
     it "should return false if 'z'" do
       expect(subject.uppercase?('z')).to be false
+    end
+  end
+
+  describe "#replace" do
+    context "when @shift is 1" do
+      subject { CaesarCipher.new('test', 1) }
+      it "return 'b' when 'a'" do
+        expect(subject.replace('a')).to eql('b')
+      end
+      it "returns 'a' when 'z'" do
+        expect(subject.replace('z')).to eql('a')
+      end
+    end
+  end
+
+  describe "#encode" do
+    context "with 'example' and shift 1" do
+      subject { CaesarCipher.new('example', 1) }
+      it "returns 'fybnqmf'" do
+        expect(subject.encode).to eql('fybnqmf')
+      end
     end
   end
 end

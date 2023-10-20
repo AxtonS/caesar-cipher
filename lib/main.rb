@@ -40,9 +40,3 @@ class CaesarCipher
     new_string.join('')
   end
 end
-
-puts "Please enter a message you'd like to encrypt:"
-message = gets.chomp
-puts "Please enter a number you'd like to shift your message by:"
-shift = gets.chomp.to_i
-puts "'#{message}' translates to '#{CaesarCipher.new(message, shift).encode}' with a shift of #{shift}"

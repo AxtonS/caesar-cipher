@@ -62,5 +62,21 @@ describe CaesarCipher do
         expect(subject.encode).to eql("fybnqmf")
       end
     end
+
+    context "with 'UPPERCASE' and shift 60" do
+      subject { CaesarCipher.new("UPPERCASE", 60) }
+
+      it "returns 'CXXMZKIAM'" do
+        expect(subject.encode).to eql("CXXMZKIAM")
+      end
+    end
+
+    context "with 'MixCase' and shift -42" do
+      subject { CaesarCipher.new("MixCase", -42) }
+
+      it "returns 'WshMkco'" do
+        expect(subject.encode).to eql("WshMkco")
+      end
+    end
   end
 end

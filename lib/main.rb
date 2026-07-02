@@ -1,11 +1,10 @@
-# encodes a given string by a given shift value
 class CaesarCipher
   attr_reader :alphabet, :string, :shift
 
-  def initialize(string = "caesar cipher", integer = 0)
+  def initialize(string = "caesar cipher", shift = 0)
     @alphabet = ("a".."z").to_a
     @string = string.chars
-    @shift = integer
+    @shift = shift
   end
 
   def replace(letter)
@@ -21,9 +20,7 @@ class CaesarCipher
   end
 
   def uppercase?(letter)
-    return true if ("A".."Z").to_a.include?(letter)
-
-    false if ("a".."z").to_a.include?(letter)
+    ("A".."Z").to_a.include?(letter) ? true : false
   end
 
   def encode

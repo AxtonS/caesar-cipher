@@ -8,15 +8,10 @@ class CaesarCipher
   end
 
   def replace(letter)
-    @alphabet.each_with_index do |value, index|
-      next if letter != value
-
-      new_letter = index + @shift
-      new_letter -= 26 while new_letter > 25
-      new_letter += 26 while new_letter.negative?
-      return alphabet[new_letter]
-    end
-    letter
+    index = @alphabet.index(letter)
+    return letter unless index
+    new_index = (index + @shift) % 26
+    @alphabet[new_index]
   end
 
   def uppercase?(letter)

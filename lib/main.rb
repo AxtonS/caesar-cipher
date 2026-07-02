@@ -19,14 +19,12 @@ class CaesarCipher
   end
 
   def encode
-    new_string = []
-    @string.each do |letter|
+    @string.map do |letter|
       if uppercase?(letter)
-        new_string.push(replace(letter.downcase).upcase)
-        next
+        replace(letter.downcase).upcase
+      else
+        replace(letter)
       end
-      new_string.push(replace(letter))
-    end
-    new_string.join
+    end.join
   end
 end
